@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		9A192C602AA17B0E006DF982 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A192C5F2AA17B0E006DF982 /* SearchView.swift */; };
 		9A192C632AA17C73006DF982 /* ScriptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A192C622AA17C73006DF982 /* ScriptureView.swift */; };
-		9A192C672AA18BBF006DF982 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A192C662AA18BBF006DF982 /* RobotoCondensed-Bold.ttf */; };
-		9A192C692AA18E4A006DF982 /* Anton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A192C682AA18E4A006DF982 /* Anton-Regular.ttf */; };
-		9A192C6B2AA18F27006DF982 /* Anton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A192C6A2AA18F27006DF982 /* Anton-Regular.otf */; };
 		9A7E22D02AA16E930040D9EC /* GoScripture-WatchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9A7E22CF2AA16E930040D9EC /* GoScripture-WatchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A7E22D52AA16E930040D9EC /* GoScripture_WatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E22D42AA16E930040D9EC /* GoScripture_WatchOSApp.swift */; };
 		9A7E22D72AA16E930040D9EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E22D62AA16E930040D9EC /* ContentView.swift */; };
@@ -22,6 +19,7 @@
 		9A7E22F22AA16E940040D9EC /* GoScripture_WatchOS_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E22F12AA16E940040D9EC /* GoScripture_WatchOS_Watch_AppUITestsLaunchTests.swift */; };
 		9A7E23082AA16F1B0040D9EC /* GoScriptureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E23072AA16F1B0040D9EC /* GoScriptureAPI.swift */; };
 		9A7E230B2AA16F440040D9EC /* ScriptureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E230A2AA16F440040D9EC /* ScriptureModel.swift */; };
+		9AF5D2EE2AA1B9B100B865A6 /* PrimaryLogo512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF5D2ED2AA1B9B100B865A6 /* PrimaryLogo512x512.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +49,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		9A7E22F82AA16E940040D9EC /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
@@ -65,10 +63,6 @@
 /* Begin PBXFileReference section */
 		9A192C5F2AA17B0E006DF982 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		9A192C622AA17C73006DF982 /* ScriptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptureView.swift; sourceTree = "<group>"; };
-		9A192C652AA18A5D006DF982 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../../../../../Downloads/Roboto_Condensed/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		9A192C662AA18BBF006DF982 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "../../../../../Downloads/Roboto_Condensed/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
-		9A192C682AA18E4A006DF982 /* Anton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Anton-Regular.ttf"; path = "../../../../../Downloads/Anton/Anton-Regular.ttf"; sourceTree = "<group>"; };
-		9A192C6A2AA18F27006DF982 /* Anton-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anton-Regular.otf"; sourceTree = "<group>"; };
 		9A7E22C92AA16E930040D9EC /* GoScripture-WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoScripture-WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E22CF2AA16E930040D9EC /* GoScripture-WatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoScripture-WatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E22D42AA16E930040D9EC /* GoScripture_WatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoScripture_WatchOSApp.swift; sourceTree = "<group>"; };
@@ -82,6 +76,7 @@
 		9A7E22F12AA16E940040D9EC /* GoScripture_WatchOS_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoScripture_WatchOS_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A7E23072AA16F1B0040D9EC /* GoScriptureAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoScriptureAPI.swift; sourceTree = "<group>"; };
 		9A7E230A2AA16F440040D9EC /* ScriptureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptureModel.swift; sourceTree = "<group>"; };
+		9AF5D2ED2AA1B9B100B865A6 /* PrimaryLogo512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrimaryLogo512x512.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +107,6 @@
 		9A192C642AA18A2C006DF982 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9A192C6A2AA18F27006DF982 /* Anton-Regular.otf */,
-				9A192C682AA18E4A006DF982 /* Anton-Regular.ttf */,
-				9A192C662AA18BBF006DF982 /* RobotoCondensed-Bold.ttf */,
-				9A192C652AA18A5D006DF982 /* RobotoCondensed-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -144,6 +135,7 @@
 		9A7E22D32AA16E930040D9EC /* GoScripture-WatchOS Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				9AF5D2EC2AA1B9A200B865A6 /* Assets */,
 				9A192C642AA18A2C006DF982 /* Fonts */,
 				9A7E23062AA16F0B0040D9EC /* Service */,
 				9A7E23022AA16EB30040D9EC /* Model */,
@@ -212,6 +204,14 @@
 				9A7E23072AA16F1B0040D9EC /* GoScriptureAPI.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9AF5D2EC2AA1B9A200B865A6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9AF5D2ED2AA1B9B100B865A6 /* PrimaryLogo512x512.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,10 +346,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A192C692AA18E4A006DF982 /* Anton-Regular.ttf in Resources */,
-				9A192C672AA18BBF006DF982 /* RobotoCondensed-Bold.ttf in Resources */,
-				9A192C6B2AA18F27006DF982 /* Anton-Regular.otf in Resources */,
 				9A7E22DC2AA16E940040D9EC /* Preview Assets.xcassets in Resources */,
+				9AF5D2EE2AA1B9B100B865A6 /* PrimaryLogo512x512.png in Resources */,
 				9A7E22D92AA16E940040D9EC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,7 +607,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dylanpriceshade.GoScripture-WatchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -625,8 +627,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dylanpriceshade.GoScripture-WatchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

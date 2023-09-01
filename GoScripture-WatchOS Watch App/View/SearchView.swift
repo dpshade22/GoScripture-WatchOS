@@ -27,6 +27,7 @@ struct SearchView: View {
                       case .success(let fetchedScriptures):
                           self.scriptures = fetchedScriptures
                           print(scriptures)
+                          WKInterfaceDevice.current().play(.success)
                       case .failure(let error):
                           print("Error: \(error)")
                       }

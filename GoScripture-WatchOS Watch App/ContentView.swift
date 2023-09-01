@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var searchText: String = ""
     @State var searchBy: String = "verse"
     @State var isLoading: Bool = false
+    @State var crownValue: Double = 0
 
     var searchOptions = ["verse", "chapter", "passage"]
 
@@ -26,12 +27,12 @@ struct ContentView: View {
                                     Label("Next Scripture", systemImage: "book")
                                 }
                     }
-                    .tag(1)
                 }
                 .tabViewStyle(.verticalPage)
-                .navigationTitle(searchText)
+                .navigationTitle("Go Scripture")
             }
         }
+        .digitalCrownRotation($crownValue)
     }
 }
 
