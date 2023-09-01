@@ -18,19 +18,26 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            ZStack {
                 TabView {
                     SearchView(scriptures: $scriptures, searchBy: searchBy)
+                        
                     ForEach(scriptures) { result in
                         ScriptureView(verse: result.verse, location: result.location)
-                            .tabItem {
-                                    Label("Next Scripture", systemImage: "book")
-                                }
                     }
                 }
                 .tabViewStyle(.verticalPage)
                 .navigationTitle("Go Scripture")
             }
+            
+            .background(Material.thick)
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.brown, Color.gray]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
         }
         .digitalCrownRotation($crownValue)
     }

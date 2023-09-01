@@ -18,20 +18,28 @@ struct SearchView: View {
 
 
     var body: some View {
-      VStack{}
+      VStack{
+          if searchText != ""{
+                Text(isLoading ?  "Finding a verse for..." : "Verses found for...")
+                  .italic()
+          }
+        Text(searchText)
+              .italic()
+      }
           .searchable(text: $searchText, prompt: searchBy)
           .onChange(of: searchText) {
+              isLoading = true
               apiClient.fetchData(searchText: searchText, searchBy: searchBy) { result in
                   DispatchQueue.main.async {
                       switch result {
                       case .success(let fetchedScriptures):
-                          self.scriptures = fetchedScriptures
+                          scriptures = fetchedScriptures
                           print(scriptures)
                           WKInterfaceDevice.current().play(.success)
                       case .failure(let error):
                           print("Error: \(error)")
                       }
-                      self.isLoading = false
+                      isLoading = false
                   }
               }
           }

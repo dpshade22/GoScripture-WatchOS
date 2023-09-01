@@ -23,6 +23,7 @@ struct ScriptureView: View {
             }
             .padding()
         }
+        .tabViewStyle(.verticalPage)
     }
 }
 
