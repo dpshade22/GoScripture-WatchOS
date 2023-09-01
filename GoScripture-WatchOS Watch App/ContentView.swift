@@ -10,30 +10,30 @@ import SwiftUI
 struct ContentView: View {
     @State var scriptures: [Scripture] = []
     @State var searchText: String = ""
-    @State var searchBy: String = "verse"
+    @State var searchBy: String = "Go Scripture"
     @State var isLoading: Bool = false
     @State var crownValue: Double = 0
 
     var searchOptions = ["verse", "chapter", "passage"]
 
     var body: some View {
-        NavigationView {
-            ZStack {
+            ZStack(alignment: .top) {
                 TabView {
-                    SearchView(scriptures: $scriptures, searchBy: searchBy)
+                    HStack{
+                        Spacer()
+                        SearchView(scriptures: $scriptures, searchBy: searchBy)
+                        Spacer()
                         
+                    }
                     ForEach(scriptures) { result in
                         ScriptureView(verse: result.verse, location: result.location)
                     }
                 }
-                .tabViewStyle(.verticalPage)
-                .navigationTitle("Go Scripture")
-            }
-            
+            .tabViewStyle(.verticalPage)
             .background(Material.thick)
             .background(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.brown, Color.gray]),
+                    gradient: Gradient(colors: [Color.brown, Color.green]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
