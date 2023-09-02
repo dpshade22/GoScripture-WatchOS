@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 class GoScriptureAPI: ObservableObject {
     @Published var scriptures: [Scripture] = []
     private let baseURL = "https://go-scripture-l7rxu2v3uq-ul.a.run.app"

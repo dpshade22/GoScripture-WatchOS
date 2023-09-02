@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9A192C602AA17B0E006DF982 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A192C5F2AA17B0E006DF982 /* SearchView.swift */; };
 		9A192C632AA17C73006DF982 /* ScriptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A192C622AA17C73006DF982 /* ScriptureView.swift */; };
-		9A6245462AA2640600A8D08A /* GetScriptureDefinition.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9A6245452AA2640600A8D08A /* GetScriptureDefinition.intentdefinition */; };
 		9A7E22D02AA16E930040D9EC /* GoScripture-WatchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9A7E22CF2AA16E930040D9EC /* GoScripture-WatchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A7E22D52AA16E930040D9EC /* GoScripture_WatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E22D42AA16E930040D9EC /* GoScripture_WatchOSApp.swift */; };
 		9A7E22D72AA16E930040D9EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E22D62AA16E930040D9EC /* ContentView.swift */; };
@@ -64,10 +63,8 @@
 /* Begin PBXFileReference section */
 		9A192C5F2AA17B0E006DF982 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		9A192C622AA17C73006DF982 /* ScriptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptureView.swift; sourceTree = "<group>"; };
-		9A6245452AA2640600A8D08A /* GetScriptureDefinition.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = GetScriptureDefinition.intentdefinition; sourceTree = "<group>"; };
 		9A6245472AA2643E00A8D08A /* GoScripture-WatchOS-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoScripture-WatchOS-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9A6245502AA2C6A500A8D08A /* GoScripture-WatchOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoScripture-WatchOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		9A6245512AA2C6C500A8D08A /* Intent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Intent.swift; path = GetScriptureIntent/Intent.swift; sourceTree = "<group>"; };
 		9A7E22C92AA16E930040D9EC /* GoScripture-WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoScripture-WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E22CF2AA16E930040D9EC /* GoScripture-WatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoScripture-WatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E22D42AA16E930040D9EC /* GoScripture_WatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoScripture_WatchOSApp.swift; sourceTree = "<group>"; };
@@ -117,18 +114,9 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		9A6245442AA263F700A8D08A /* Intents */ = {
-			isa = PBXGroup;
-			children = (
-				9A6245452AA2640600A8D08A /* GetScriptureDefinition.intentdefinition */,
-			);
-			path = Intents;
-			sourceTree = "<group>";
-		};
 		9A7E22C22AA16E930040D9EC = {
 			isa = PBXGroup;
 			children = (
-				9A6245512AA2C6C500A8D08A /* Intent.swift */,
 				9A7E22D32AA16E930040D9EC /* GoScripture-WatchOS Watch App */,
 				9A7E22E42AA16E940040D9EC /* GoScripture-WatchOS Watch AppTests */,
 				9A7E22EE2AA16E940040D9EC /* GoScripture-WatchOS Watch AppUITests */,
@@ -152,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				9A6245472AA2643E00A8D08A /* GoScripture-WatchOS-Watch-App-Info.plist */,
-				9A6245442AA263F700A8D08A /* Intents */,
 				9AF5D3052AA256E100B865A6 /* GoScripture-WatchOS Watch App.entitlements */,
 				9AF5D2EC2AA1B9A200B865A6 /* Assets */,
 				9A192C642AA18A2C006DF982 /* Fonts */,
@@ -399,7 +386,6 @@
 				9A7E22D72AA16E930040D9EC /* ContentView.swift in Sources */,
 				9A192C632AA17C73006DF982 /* ScriptureView.swift in Sources */,
 				9A7E22D52AA16E930040D9EC /* GoScripture_WatchOSApp.swift in Sources */,
-				9A6245462AA2640600A8D08A /* GetScriptureDefinition.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
