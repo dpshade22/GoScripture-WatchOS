@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct SearchView: View {
     @Binding var scriptures: [Scripture]
     @State var searchText = ""
@@ -16,36 +15,39 @@ struct SearchView: View {
     let searchBy: String
     var apiClient = GoScriptureAPI()
 
-
     var body: some View {
-            NavigationView{
-                VStack {
-                    if searchText != ""{
-                        Text(isLoading ?  "Finding verse..." : "Verses found...")
-                            .italic()
-                            .padding()
-                    }
+        NavigationView {
+            VStack {
+                if searchText != "" {
+                    Text(isLoading ? "Finding verse..." : "Verses found...")
+                        .italic()
+                        .padding()
                 }
-                .searchable(text: $searchText, prompt: searchBy)
             }
-            .onChange(of: searchText) {
-                isLoading = true
-                apiClient.fetchData(searchText: searchText, searchBy: searchBy) { result in
-                    DispatchQueue.main.async {
-                        switch result {
-                        case .success(let fetchedScriptures):
-                            scriptures = fetchedScriptures
-                            print(scriptures)
-                            WKInterfaceDevice.current().play(.success)
-                        case .failure(let error):
-                            print("Error: \(error)")
-                        }
-                        isLoading = false
-                    }
-            }
+            .searchable(text: $searchText, prompt: searchBy)
+        }
+        .onChange(of: searchText) {
+            handleSearchTextChange(searchText: searchText)
         }
     }
 
+    func handleSearchTextChange(searchText: String) {
+        isLoading = true
+        Task {
+            do {
+                let fetchedScriptures = try await apiClient.fetchData(searchText: searchText, searchBy: searchBy)
+                DispatchQueue.main.async {
+                    scriptures = fetchedScriptures
+                    print(scriptures)
+                    WKInterfaceDevice.current().play(.success)
+                    isLoading = false
+                }
+            } catch {
+                print("Error: \(error)")
+                isLoading = false
+            }
+        }
+    }
 }
 
 #Preview {

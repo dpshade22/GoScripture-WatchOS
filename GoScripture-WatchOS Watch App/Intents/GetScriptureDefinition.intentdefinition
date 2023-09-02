@@ -27,6 +27,10 @@
 			<string>gNAKNa</string>
 			<key>INIntentEligibleForWidgets</key>
 			<true/>
+			<key>INIntentInput</key>
+			<string>search</string>
+			<key>INIntentKeyParameter</key>
+			<string>search</string>
 			<key>INIntentLastParameterTag</key>
 			<integer>1</integer>
 			<key>INIntentManagedParameterCombinations</key>
@@ -123,9 +127,30 @@
 						<string>failure</string>
 					</dict>
 				</array>
+				<key>INIntentResponseLastParameterTag</key>
+				<integer>1</integer>
+				<key>INIntentResponseOutput</key>
+				<string>jsonResult</string>
+				<key>INIntentResponseParameters</key>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Json Result</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>swhtoD</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>jsonResult</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Scripture</string>
+			<string>Get Scripture</string>
 			<key>INIntentTitleID</key>
 			<string>I6cj8Y</string>
 			<key>INIntentType</key>

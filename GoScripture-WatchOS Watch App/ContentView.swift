@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var scriptures: [Scripture] = []
     @State var searchText: String = ""
-    @State var searchBy: String = "Go Scripture"
+    @State var searchBy: String = "God's Word"
     @State var isLoading: Bool = false
     @State var crownValue: Double = 0
 
@@ -33,7 +33,7 @@ struct ContentView: View {
             .background(Material.thick)
             .background(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.brown, Color.green]),
+                    gradient: Gradient(colors: [Color.brown, Color.gray]),
                     startPoint: .top,
                     endPoint: .bottom
                 )

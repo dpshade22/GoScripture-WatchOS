@@ -66,6 +66,8 @@
 		9A192C622AA17C73006DF982 /* ScriptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptureView.swift; sourceTree = "<group>"; };
 		9A6245452AA2640600A8D08A /* GetScriptureDefinition.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = GetScriptureDefinition.intentdefinition; sourceTree = "<group>"; };
 		9A6245472AA2643E00A8D08A /* GoScripture-WatchOS-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoScripture-WatchOS-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9A6245502AA2C6A500A8D08A /* GoScripture-WatchOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoScripture-WatchOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A6245512AA2C6C500A8D08A /* Intent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Intent.swift; path = GetScriptureIntent/Intent.swift; sourceTree = "<group>"; };
 		9A7E22C92AA16E930040D9EC /* GoScripture-WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoScripture-WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E22CF2AA16E930040D9EC /* GoScripture-WatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoScripture-WatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E22D42AA16E930040D9EC /* GoScripture_WatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoScripture_WatchOSApp.swift; sourceTree = "<group>"; };
@@ -126,10 +128,12 @@
 		9A7E22C22AA16E930040D9EC = {
 			isa = PBXGroup;
 			children = (
+				9A6245512AA2C6C500A8D08A /* Intent.swift */,
 				9A7E22D32AA16E930040D9EC /* GoScripture-WatchOS Watch App */,
 				9A7E22E42AA16E940040D9EC /* GoScripture-WatchOS Watch AppTests */,
 				9A7E22EE2AA16E940040D9EC /* GoScripture-WatchOS Watch AppUITests */,
 				9A7E22CA2AA16E930040D9EC /* Products */,
+				9A6245502AA2C6A500A8D08A /* GoScripture-WatchOS-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -314,6 +318,7 @@
 				TargetAttributes = {
 					9A7E22C82AA16E930040D9EC = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					9A7E22CE2AA16E930040D9EC = {
 						CreatedOnToolsVersion = 15.0;
@@ -619,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 467UZHSCC3;
@@ -629,6 +635,8 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoScripture-WatchOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
@@ -639,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 467UZHSCC3;
@@ -649,6 +658,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoScripture-WatchOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
