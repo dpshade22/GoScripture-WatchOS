@@ -24,7 +24,7 @@ struct SearchView: View {
                         .padding()
                 }
             }
-            .searchable(text: $searchText, prompt: searchBy)
+            .searchable(text: $searchText, prompt: "Search God's Word")
         }
         .onChange(of: searchText) {
             handleSearchTextChange(searchText: searchText)

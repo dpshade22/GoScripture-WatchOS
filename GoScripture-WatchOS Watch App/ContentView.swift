@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var scriptures: [Scripture] = []
     @State var searchText: String = ""
-    @State var searchBy: String = "God's Word"
+    @State var searchBy: String = "verse"
     @State var isLoading: Bool = false
     @State var crownValue: Double = 0
     @State private var selectedTab = 0
