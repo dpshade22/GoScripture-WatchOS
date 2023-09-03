@@ -23,10 +23,7 @@ struct ContentView: View {
                     Button {
                       showResults = true
                     } label: {
-//                      Image("Logo")
-//                        .resizable()
-//                        .frame(width: 50, height: 50)
-//                        .clipShape(Circle())
+                      
                         Text("Back to Results")
                             .italic()
                     }
@@ -36,8 +33,16 @@ struct ContentView: View {
                     })
                 }
             }
-            
+            .italic()
+//            .toolbar {
+//                ToolbarItem(placement: .automatic) {
+//                    Text("Go Scripture")
+//                        .font(.headline)
+//                        .padding()
+//              }
+//            }
         }
+        
         .background(Material.thick)
         .background(
             LinearGradient(

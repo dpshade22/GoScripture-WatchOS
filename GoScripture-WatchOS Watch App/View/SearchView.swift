@@ -27,8 +27,8 @@ struct SearchView: View {
                         .navigationDestination(isPresented: $showResults, destination: {
                             ResultsView(resultsViewModel: resultsViewModel)
                         })
-                    if searchText != "" {
-                        Text(isLoading ? "Finding verses..." : "Verses found")
+                    if searchText != "" && isLoading {
+                        Text("Finding verses...")
                             .italic()
                     }
                 }

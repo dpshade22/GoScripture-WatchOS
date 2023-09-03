@@ -15,6 +15,7 @@ struct ResultsView: View {
                 NavigationLink(destination: ScriptureView(verse: result.verse, location: result.location)) {
                         Text(result.location)
                         .bold()
+                        .italic()
                 }
             }
     }
