@@ -8,39 +8,43 @@
 import SwiftUI
 
 struct SearchView: View {
-    @Binding var scriptures: [Scripture]
+    @ObservedObject var resultsViewModel: ResultsViewModel
+
     @State var searchText = ""
     @State var isLoading: Bool = false
+    @State private var showResults = false
 
     let searchBy: String
     var apiClient = GoScriptureAPI()
 
     var body: some View {
-        NavigationView {
-            VStack {
-                if searchText != "" {
-                    Text(isLoading ? "Finding verse..." : "Verses found...")
-                        .italic()
+                VStack {
+                    TextField("Search God's Word", text: $searchText)
                         .padding()
+                        .onChange(of: searchText) {
+                            handleSearchTextChange(searchText: searchText)
+                        }
+                        .navigationDestination(isPresented: $showResults, destination: {
+                            ResultsView(resultsViewModel: resultsViewModel)
+                        })
+                    if searchText != "" {
+                        Text(isLoading ? "Finding verses..." : "Verses found")
+                            .italic()
+                    }
                 }
-            }
-            .searchable(text: $searchText, prompt: "Search God's Word")
         }
-        .onChange(of: searchText) {
-            handleSearchTextChange(searchText: searchText)
-        }
-    }
-
+    
     func handleSearchTextChange(searchText: String) {
         isLoading = true
         Task {
             do {
                 let fetchedScriptures = try await apiClient.fetchData(searchText: searchText, searchBy: searchBy)
                 DispatchQueue.main.async {
-                    scriptures = fetchedScriptures
-                    print(scriptures)
+                    resultsViewModel.scriptures = fetchedScriptures
+                
                     WKInterfaceDevice.current().play(.success)
                     isLoading = false
+                    showResults = true
                 }
             } catch {
                 print("Error: \(error)")
@@ -49,7 +53,6 @@ struct SearchView: View {
         }
     }
 }
-
 #Preview {
-    SearchView(scriptures: .constant([]), searchBy: "Verse")
+    SearchView(resultsViewModel: ResultsViewModel(), searchBy: "Verse")
 }

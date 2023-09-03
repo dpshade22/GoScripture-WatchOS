@@ -23,7 +23,9 @@
 		9A7E22F22AA16E940040D9EC /* GoScripture_WatchOS_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E22F12AA16E940040D9EC /* GoScripture_WatchOS_Watch_AppUITestsLaunchTests.swift */; };
 		9A7E23082AA16F1B0040D9EC /* GoScriptureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E23072AA16F1B0040D9EC /* GoScriptureAPI.swift */; };
 		9A7E230B2AA16F440040D9EC /* ScriptureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E230A2AA16F440040D9EC /* ScriptureModel.swift */; };
-		9AF5D2EE2AA1B9B100B865A6 /* PrimaryLogo512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF5D2ED2AA1B9B100B865A6 /* PrimaryLogo512x512.png */; };
+		9A886C4F2AA5316B00EED127 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C4E2AA5316B00EED127 /* ResultsView.swift */; };
+		9A886C512AA53AED00EED127 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C502AA53AED00EED127 /* ResultsViewModel.swift */; };
+		9AF5D2EE2AA1B9B100B865A6 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF5D2ED2AA1B9B100B865A6 /* Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +122,9 @@
 		9A886C232AA514A400EED127 /* GoScripture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoScripture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A886C332AA514A500EED127 /* GoScriptureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoScriptureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A886C3D2AA514A500EED127 /* GoScriptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoScriptureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AF5D2ED2AA1B9B100B865A6 /* PrimaryLogo512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrimaryLogo512x512.png; sourceTree = "<group>"; };
+		9A886C4E2AA5316B00EED127 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		9A886C502AA53AED00EED127 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		9AF5D2ED2AA1B9B100B865A6 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		9AF5D3052AA256E100B865A6 /* GoScripture-WatchOS Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GoScripture-WatchOS Watch App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +275,7 @@
 			children = (
 				9A192C5F2AA17B0E006DF982 /* SearchView.swift */,
 				9A192C622AA17C73006DF982 /* ScriptureView.swift */,
+				9A886C4E2AA5316B00EED127 /* ResultsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 		9A7E23042AA16EBF0040D9EC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9A886C502AA53AED00EED127 /* ResultsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -293,7 +299,7 @@
 		9AF5D2EC2AA1B9A200B865A6 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				9AF5D2ED2AA1B9B100B865A6 /* PrimaryLogo512x512.png */,
+				9AF5D2ED2AA1B9B100B865A6 /* Logo.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -502,7 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A7E22DC2AA16E940040D9EC /* Preview Assets.xcassets in Resources */,
-				9AF5D2EE2AA1B9B100B865A6 /* PrimaryLogo512x512.png in Resources */,
+				9AF5D2EE2AA1B9B100B865A6 /* Logo.png in Resources */,
 				9A7E22D92AA16E940040D9EC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,7 +556,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A1105A22AA2E21A0033DA22 /* Intents.intentdefinition in Sources */,
+				9A886C4F2AA5316B00EED127 /* ResultsView.swift in Sources */,
 				9A192C602AA17B0E006DF982 /* SearchView.swift in Sources */,
+				9A886C512AA53AED00EED127 /* ResultsViewModel.swift in Sources */,
 				9A7E23082AA16F1B0040D9EC /* GoScriptureAPI.swift in Sources */,
 				9A7E230B2AA16F440040D9EC /* ScriptureModel.swift in Sources */,
 				9A7E22D72AA16E930040D9EC /* ContentView.swift in Sources */,

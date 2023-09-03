@@ -8,44 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var scriptures: [Scripture] = []
-    @State var searchText: String = ""
-    @State var searchBy: String = "verse"
-    @State var isLoading: Bool = false
-    @State var crownValue: Double = 0
-    @State private var selectedTab = 0
+    @StateObject var resultsViewModel = ResultsViewModel()
 
-    var searchOptions = ["verse", "chapter", "passage"]
+    @State private var searchBy: String = "verse"
+    @State private var showResults = false
 
     var body: some View {
-            ZStack(alignment: .top) {
-                TabView(selection: $selectedTab) {
-                    HStack{
-                        Spacer()
-                        SearchView(scriptures: $scriptures, searchBy: searchBy)
-                        Spacer()
-                        
+        NavigationStack {
+            VStack {
+                SearchView(resultsViewModel: resultsViewModel, searchBy: searchBy)
+                Spacer()
+                
+                if resultsViewModel.scriptures != [] {
+                    Button {
+                      showResults = true
+                    } label: {
+//                      Image("Logo")
+//                        .resizable()
+//                        .frame(width: 50, height: 50)
+//                        .clipShape(Circle())
+                        Text("Back to Results")
+                            .italic()
                     }
-                    ForEach(scriptures) { result in
-                        ScriptureView(verse: result.verse, location: result.location)
-                            .tag(result.index)
-                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .navigationDestination(isPresented: $showResults, destination: {
+                        ResultsView(resultsViewModel: resultsViewModel)
+                    })
                 }
-                .onChange(of: scriptures) {
-                    selectedTab = 0
-                }
-            .tabViewStyle(.verticalPage)
-            .background(Material.thick)
-            .background(
-                LinearGradient(
-                    gradient: Gradient(colors: [Color.brown, Color.gray]),
-                    startPoint: .top,
-                    
-                    endPoint: .bottom
-                )
-            )
+            }
+            
         }
-        .digitalCrownRotation($crownValue)
+        .background(Material.thick)
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.brown, Color.gray]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        )
     }
 }
 
