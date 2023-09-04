@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ResultsView: View {
     @ObservedObject var resultsViewModel: ResultsViewModel
+    
     @Binding var selectedVerse: Int
     @Binding var selectedTab: Int
     

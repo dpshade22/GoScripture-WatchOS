@@ -36,6 +36,9 @@ struct ContentView: View {
                     .tag(2)
             }
         }
+        .onChange(of: tabSelection) {
+            WKInterfaceDevice.current().play(.click)
+        }
         .background(Material.thick)
         .background(
             LinearGradient(
