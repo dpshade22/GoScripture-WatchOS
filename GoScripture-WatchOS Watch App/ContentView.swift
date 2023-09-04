@@ -14,14 +14,17 @@ struct ContentView: View {
     @State private var searchBy: String = "verse"
     @State private var showResults: Bool = false
     @State private var tabSelection = 0
-    
+    @State private var isSubscribed: Bool = true
+
     var body: some View {
         TabView(selection: $tabSelection) {
-            SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection, selectedVerse: $selectedVerse)
-                .tabItem {
-                    Text("Search")
-                }
-                .tag(0)
+            if isSubscribed {
+                SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection, selectedVerse: $selectedVerse)
+                    .tabItem {
+                        Text("Search")
+                    }
+                    .tag(0)
+            }
             
             if resultsViewModel.scriptures.count > 0 {
                 ResultsTabView(resultsViewModel: resultsViewModel, selectedVerse: $selectedVerse)
