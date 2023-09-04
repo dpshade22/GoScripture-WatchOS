@@ -13,31 +13,47 @@ struct SearchView: View {
     
     @State var searchText = ""
     @State var isLoading: Bool = false
-
+    
     var apiClient = GoScriptureAPI()
-
+    
     var body: some View {
-                VStack {
-                    TextField("Search God's Word", text: $searchText)
-                        .padding()
-                        .onChange(of: searchText) {
-                            handleSearchTextChange(searchText: searchText)
-                        }
-                    if searchText != "" && isLoading {
-                        Text("Finding verses...")
-                            .italic()
-                    }
+        VStack {
+            TextField("Search God's Word", text: $searchText)
+                .padding()
+                .foregroundStyle(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color(red: 240/255, green: 225/255, blue: 208/255), Color(red: 250/255, green: 245/255, blue: 239/255)]),
+                    startPoint: .top,
+                    endPoint: .bottomTrailing
+                ))
+                .onChange(of: searchText) {
+                    handleSearchTextChange(searchText: searchText)
                 }
+            if searchText != "" && isLoading {
+                Text("Finding verses...")
+                    .italic()
+            }
+            Spacer()
+            if resultsViewModel.scriptures.count > 0 && !isLoading {
+                Button {
+                    tabSelection = 1
+                } label: {
+                    Text("Back to results")
+                        .italic()
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
         }
+    }
     
     func handleSearchTextChange(searchText: String) {
-        isLoading = true
         Task {
             do {
+                isLoading = true
                 let fetchedScriptures = try await apiClient.fetchData(searchText: searchText)
                 DispatchQueue.main.async {
                     resultsViewModel.scriptures = fetchedScriptures
-                
+                    
                     WKInterfaceDevice.current().play(.success)
                     isLoading = false
                     tabSelection = 1

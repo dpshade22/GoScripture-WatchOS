@@ -14,17 +14,15 @@ struct ContentView: View {
     @State private var searchBy: String = "verse"
     @State private var showResults: Bool = false
     @State private var tabSelection = 0
-
+    
     var body: some View {
         TabView(selection: $tabSelection) {
-            VStack {
-                SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection)
-                Spacer()
-                
-            }
-            .tabItem {
-                        Text("Search")
-                    }
+            SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection)
+                .tabItem {
+                    Text("Search")
+                }
+                .tag(0)
+            
             if resultsViewModel.scriptures.count > 0 {
                 ResultsTabView(resultsViewModel: resultsViewModel, selectedVerse: $selectedVerse)
                     .tabItem {
@@ -38,7 +36,6 @@ struct ContentView: View {
                     .tag(2)
             }
         }
-        
         .background(Material.thick)
         .background(
             LinearGradient(

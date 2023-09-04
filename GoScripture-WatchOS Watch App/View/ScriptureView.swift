@@ -10,16 +10,17 @@ import SwiftUI
 struct ScriptureView: View {
     let verse: String
     let location: String
-
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text(location)
                     .font(.headline)
-                Text(verse)
+                TextGradient(text: verse)
                     .font(.subheadline)
-                    .foregroundColor(.gray)
                     .italic()
+                    
+
             }
             .padding()
         }

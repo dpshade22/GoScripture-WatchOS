@@ -11,7 +11,7 @@ struct ResultsView: View {
     @ObservedObject var resultsViewModel: ResultsViewModel
     @Binding var selectedVerse: Int
     @Binding var selectedTab: Int
-
+    
     var body: some View {
         NavigationView {
             TabView {
@@ -23,13 +23,12 @@ struct ResultsView: View {
                             selectedVerse = index
                             selectedTab = 1
                         }) {
-                            Text(scripture.location)
+                            TextGradient(text: scripture.location)
                                 .bold()
                         }
                     }
                 }
             }
-            .navigationTitle("Go Scripture")
         }
     }
 }
