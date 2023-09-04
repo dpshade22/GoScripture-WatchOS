@@ -10,7 +10,8 @@ import SwiftUI
 struct SearchView: View {
     @ObservedObject var resultsViewModel: ResultsViewModel
     @Binding var tabSelection: Int
-    
+    @Binding var selectedVerse: Int
+
     @State var searchText = ""
     @State var isLoading: Bool = false
     
@@ -76,6 +77,7 @@ struct SearchView: View {
                     
                     WKInterfaceDevice.current().play(.success)
                     isLoading = false
+                    selectedVerse = 0
                     tabSelection = 1
                 }
             } catch {
@@ -87,5 +89,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView(resultsViewModel: ResultsViewModel(), tabSelection: .constant(1))
+    SearchView(resultsViewModel: ResultsViewModel(), tabSelection: .constant(1), selectedVerse: .constant(0))
 }

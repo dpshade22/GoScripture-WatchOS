@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $tabSelection) {
-            SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection)
+            SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection, selectedVerse: $selectedVerse)
                 .tabItem {
                     Text("Search")
                 }
