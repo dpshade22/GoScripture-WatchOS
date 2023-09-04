@@ -9,12 +9,11 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var resultsViewModel: ResultsViewModel
-
+    @Binding var tabSelection: Int
+    
     @State var searchText = ""
     @State var isLoading: Bool = false
-    @State private var showResults = false
 
-    let searchBy: String
     var apiClient = GoScriptureAPI()
 
     var body: some View {
@@ -24,9 +23,6 @@ struct SearchView: View {
                         .onChange(of: searchText) {
                             handleSearchTextChange(searchText: searchText)
                         }
-                        .navigationDestination(isPresented: $showResults, destination: {
-                            ResultsView(resultsViewModel: resultsViewModel)
-                        })
                     if searchText != "" && isLoading {
                         Text("Finding verses...")
                             .italic()
@@ -38,13 +34,13 @@ struct SearchView: View {
         isLoading = true
         Task {
             do {
-                let fetchedScriptures = try await apiClient.fetchData(searchText: searchText, searchBy: searchBy)
+                let fetchedScriptures = try await apiClient.fetchData(searchText: searchText)
                 DispatchQueue.main.async {
                     resultsViewModel.scriptures = fetchedScriptures
                 
                     WKInterfaceDevice.current().play(.success)
                     isLoading = false
-                    showResults = true
+                    tabSelection = 1
                 }
             } catch {
                 print("Error: \(error)")
@@ -53,6 +49,7 @@ struct SearchView: View {
         }
     }
 }
+
 #Preview {
-    SearchView(resultsViewModel: ResultsViewModel(), searchBy: "Verse")
+    SearchView(resultsViewModel: ResultsViewModel(), tabSelection: .constant(1))
 }

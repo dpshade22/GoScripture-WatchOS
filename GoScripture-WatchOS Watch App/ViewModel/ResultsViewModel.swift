@@ -16,7 +16,7 @@ class ResultsViewModel: ObservableObject {
     func fetchData(searchText: String, searchBy: String) {
         Task {
             do {
-                let fetchedScriptures = try await apiClient.fetchData(searchText: searchText, searchBy: searchBy)
+                let fetchedScriptures = try await apiClient.fetchData(searchText: searchText)
                 DispatchQueue.main.async {
                     self.scriptures = fetchedScriptures
                 }

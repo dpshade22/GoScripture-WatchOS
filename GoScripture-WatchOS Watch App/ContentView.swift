@@ -9,38 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var resultsViewModel = ResultsViewModel()
-
+    
+    @State var selectedVerse = 0
     @State private var searchBy: String = "verse"
-    @State private var showResults = false
+    @State private var showResults: Bool = false
+    @State private var tabSelection = 0
 
     var body: some View {
-        NavigationStack {
+        TabView(selection: $tabSelection) {
             VStack {
-                SearchView(resultsViewModel: resultsViewModel, searchBy: searchBy)
+                SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection)
                 Spacer()
                 
-                if resultsViewModel.scriptures != [] {
-                    Button {
-                      showResults = true
-                    } label: {
-                      
-                        Text("Back to Results")
-                            .italic()
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .navigationDestination(isPresented: $showResults, destination: {
-                        ResultsView(resultsViewModel: resultsViewModel)
-                    })
-                }
             }
-            .italic()
-//            .toolbar {
-//                ToolbarItem(placement: .automatic) {
-//                    Text("Go Scripture")
-//                        .font(.headline)
-//                        .padding()
-//              }
-//            }
+            .tabItem {
+                        Text("Search")
+                    }
+            if resultsViewModel.scriptures.count > 0 {
+                ResultsTabView(resultsViewModel: resultsViewModel, selectedVerse: $selectedVerse)
+                    .tabItem {
+                        Text("ResultsTabView")
+                    }
+                    .tag(1)
+                ResultsView(resultsViewModel: resultsViewModel, selectedVerse: $selectedVerse, selectedTab: $tabSelection)
+                    .tabItem {
+                        Text("List")
+                    }
+                    .tag(2)
+            }
         }
         
         .background(Material.thick)

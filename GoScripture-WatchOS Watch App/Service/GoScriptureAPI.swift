@@ -12,7 +12,7 @@ class GoScriptureAPI: ObservableObject {
     @Published var scriptures: [Scripture] = []
     private let baseURL = "https://go-scripture-l7rxu2v3uq-ul.a.run.app"
 
-    func fetchData(searchText: String, searchBy: String) async throws -> [Scripture] {
+    func fetchData(searchText: String) async throws -> [Scripture] {
         return try await withCheckedThrowingContinuation { continuation in
             let allowedCharacters = CharacterSet.urlQueryAllowed
             guard let encodedSearchText = searchText.addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
