@@ -48,7 +48,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A7E22E02AA16E940040D9EC"
+               BlueprintIdentifier = "9A19FD852AB664B000F4554F"
                BuildableName = "GoScripture Watch AppTests.xctest"
                BlueprintName = "GoScripture Watch AppTests"
                ReferencedContainer = "container:GoScripture.xcodeproj">
@@ -59,7 +59,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A7E22EA2AA16E940040D9EC"
+               BlueprintIdentifier = "9A19FD762AB664AB00F4554F"
                BuildableName = "GoScripture Watch AppUITests.xctest"
                BlueprintName = "GoScripture Watch AppUITests"
                ReferencedContainer = "container:GoScripture.xcodeproj">
