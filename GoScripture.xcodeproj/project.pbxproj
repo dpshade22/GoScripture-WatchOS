@@ -29,12 +29,7 @@
 		9A7E230B2AA16F440040D9EC /* ScriptureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E230A2AA16F440040D9EC /* ScriptureModel.swift */; };
 		9A886C4F2AA5316B00EED127 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C4E2AA5316B00EED127 /* ResultsView.swift */; };
 		9A886C512AA53AED00EED127 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C502AA53AED00EED127 /* ResultsViewModel.swift */; };
-		9AED3FEA2AB65CE400B4F47F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A192C5F2AA17B0E006DF982 /* SearchView.swift */; };
 		9AED3FEB2AB65CEC00B4F47F /* GoScriptureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E23072AA16F1B0040D9EC /* GoScriptureAPI.swift */; };
-		9AED3FEC2AB65CF000B4F47F /* ScriptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A192C622AA17C73006DF982 /* ScriptureView.swift */; };
-		9AED3FED2AB65CF400B4F47F /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C4E2AA5316B00EED127 /* ResultsView.swift */; };
-		9AED3FEE2AB65CF600B4F47F /* ResultsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1848B32AA63755007A9B62 /* ResultsTabView.swift */; };
-		9AED3FEF2AB65CFA00B4F47F /* TextGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1848B52AA65EB0007A9B62 /* TextGradient.swift */; };
 		9AED3FF12AB65D3300B4F47F /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C502AA53AED00EED127 /* ResultsViewModel.swift */; };
 		9AED3FF22AB65DC400B4F47F /* ScriptureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E230A2AA16F440040D9EC /* ScriptureModel.swift */; };
 /* End PBXBuildFile section */
@@ -298,6 +293,7 @@
 			children = (
 				9A1105A52AA2E21F0033DA22 /* GoScripture-Info.plist */,
 				9A192C642AA18A2C006DF982 /* Fonts */,
+				9A7E23032AA16EB80040D9EC /* View */,
 				9A7E22D42AA16E930040D9EC /* GoScripture_WatchOSApp.swift */,
 				9A7E22D62AA16E930040D9EC /* ContentView.swift */,
 				9A7E22D82AA16E940040D9EC /* Assets.xcassets */,
@@ -354,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				9A7E23022AA16EB30040D9EC /* Model */,
-				9A7E23032AA16EB80040D9EC /* View */,
 				9A7E23042AA16EBF0040D9EC /* ViewModel */,
 				9A7E23062AA16F0B0040D9EC /* Service */,
 			);
@@ -617,16 +612,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AED3FEF2AB65CFA00B4F47F /* TextGradient.swift in Sources */,
 				9AED3FF22AB65DC400B4F47F /* ScriptureModel.swift in Sources */,
 				9AED3FEB2AB65CEC00B4F47F /* GoScriptureAPI.swift in Sources */,
-				9AED3FED2AB65CF400B4F47F /* ResultsView.swift in Sources */,
 				9AED3FF12AB65D3300B4F47F /* ResultsViewModel.swift in Sources */,
 				9A4C99772AB4E633000543D3 /* ContentView.swift in Sources */,
-				9AED3FEC2AB65CF000B4F47F /* ScriptureView.swift in Sources */,
-				9AED3FEA2AB65CE400B4F47F /* SearchView.swift in Sources */,
 				9A4C99752AB4E633000543D3 /* GoScripture_iOSApp.swift in Sources */,
-				9AED3FEE2AB65CF600B4F47F /* ResultsTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

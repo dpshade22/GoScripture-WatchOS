@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GoScripture iOS App.xcscheme_^#shared#^_</key>
+		<key>GoScripture Watch App.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<true/>
 		</dict>
-		<key>GoScripture-WatchOS Watch App.xcscheme_^#shared#^_</key>
+		<key>GoScripture iOS App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>GoScripture-iOS.xcscheme_^#shared#^_</key>
 		<dict>
@@ -55,6 +55,16 @@
 			<true/>
 		</dict>
 		<key>9A1105C42AA3CC8D0033DA22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A19FD762AB664AB00F4554F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A19FD852AB664B000F4554F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

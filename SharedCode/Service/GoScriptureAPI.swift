@@ -20,7 +20,7 @@ class GoScriptureAPI: ObservableObject {
                 return
             }
 
-            let urlString = "\(baseURL)/search?query=\(encodedSearchText)"
+            let urlString = "\(baseURL)/search?q=\(encodedSearchText)"
             guard let url = URL(string: urlString) else {
                 continuation.resume(throwing: NSError(domain: "GoScriptureAPI", code: 2, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"]))
                 return
