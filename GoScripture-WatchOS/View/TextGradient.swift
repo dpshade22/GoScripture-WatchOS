@@ -13,7 +13,7 @@ struct TextGradient: View {
         Text(text)
             .foregroundStyle(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color(red: 255/255, green: 241/255, blue: 216/255), Color(red: 255/255, green: 251/255, blue: 243/255)]),
+                    gradient: Gradient(colors: [Color("Foreground Brown"), Color("Foreground White")]),
                 startPoint: .top,
                 endPoint: .bottomTrailing
             ))

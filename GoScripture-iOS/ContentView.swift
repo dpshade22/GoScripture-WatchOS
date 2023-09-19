@@ -17,36 +17,20 @@ struct ContentView: View {
     @State private var isSubscribed: Bool = true
 
     var body: some View {
-        TabView(selection: $tabSelection) {
-            if isSubscribed {
-                SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection, selectedVerse: $selectedVerse)
-                    .tabItem {
-                        Text("Search")
-                    }
-                    .tag(0)
-            }
-            
-            if $resultsViewModel.scriptures.count > 0 {
-                ResultsTabView(resultsViewModel: resultsViewModel, selectedVerse: $selectedVerse)
-                    .tabItem {
-                        Text("ResultsTabView")
-                    }
-                    .tag(1)
-                ResultsView(resultsViewModel: resultsViewModel, selectedVerse: $selectedVerse, selectedTab: $tabSelection)
-                    .tabItem {
-                        Text("List")
-                    }
-                    .tag(2)
-            }
-        }
-        .background(Material.thick)
-        .background(
+        ZStack {
             LinearGradient(
-                gradient: Gradient(colors: [Color.brown, Color.gray]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-        )
+                gradient: Gradient(colors: [Color("Coffee Brown"), Color("Light Brown")]),
+               startPoint: .top,
+               endPoint: .bottomTrailing
+             )
+            .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Text("test")
+            }
+            .searchable(text: $searchBy)
+            
+        }
     }
 }
 
