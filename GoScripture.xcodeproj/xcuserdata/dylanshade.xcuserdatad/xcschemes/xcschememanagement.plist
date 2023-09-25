@@ -4,17 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AppIntentsExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>GoScripture Watch App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>GoScripture iOS App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>GoScripture-iOS.xcscheme_^#shared#^_</key>
 		<dict>

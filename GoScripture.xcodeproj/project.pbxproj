@@ -17,6 +17,10 @@
 		9A19FD962AB664BA00F4554F /* GoScripture_iOS_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19FD952AB664BA00F4554F /* GoScripture_iOS_AppUITests.swift */; };
 		9A19FD982AB664BA00F4554F /* GoScripture_iOS_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19FD972AB664BA00F4554F /* GoScripture_iOS_AppUITestsLaunchTests.swift */; };
 		9A19FDA52AB664C100F4554F /* GoScripture_iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19FDA42AB664C100F4554F /* GoScripture_iOS_AppTests.swift */; };
+		9A3458832AC2040B008818CD /* AppIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3458822AC2040B008818CD /* AppIntents.swift */; };
+		9A3458C62AC22200008818CD /* AppIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3458822AC2040B008818CD /* AppIntents.swift */; };
+		9A3458DA2AC22F5F008818CD /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1105AC2AA2E30A0033DA22 /* Intents.framework */; };
+		9A3458DB2AC22F60008818CD /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1105AC2AA2E30A0033DA22 /* Intents.framework */; };
 		9A4C99752AB4E633000543D3 /* GoScripture_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C99742AB4E633000543D3 /* GoScripture_iOSApp.swift */; };
 		9A4C99772AB4E633000543D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C99762AB4E633000543D3 /* ContentView.swift */; };
 		9A4C99792AB4E634000543D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4C99782AB4E634000543D3 /* Assets.xcassets */; };
@@ -83,6 +87,16 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9A3458D92AC22D1D008818CD /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +118,8 @@
 		9A19FD972AB664BA00F4554F /* GoScripture_iOS_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoScripture_iOS_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A19FDA22AB664C100F4554F /* GoScripture iOS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoScripture iOS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A19FDA42AB664C100F4554F /* GoScripture_iOS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoScripture_iOS_AppTests.swift; sourceTree = "<group>"; };
+		9A3458822AC2040B008818CD /* AppIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntents.swift; sourceTree = "<group>"; };
+		9A3458C72AC2295D008818CD /* GoScripture iOS App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GoScripture iOS App.entitlements"; sourceTree = "<group>"; };
 		9A4C99722AB4E632000543D3 /* GoScripture iOS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoScripture iOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4C99742AB4E633000543D3 /* GoScripture_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoScripture_iOSApp.swift; sourceTree = "<group>"; };
 		9A4C99762AB4E633000543D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3458DA2AC22F5F008818CD /* Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3458DB2AC22F60008818CD /* Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +262,14 @@
 			path = Testing;
 			sourceTree = "<group>";
 		};
+		9A3458812AC20400008818CD /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				9A3458822AC2040B008818CD /* AppIntents.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
 		9A4C99732AB4E633000543D3 /* GoScripture-iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +292,7 @@
 		9A7E22C22AA16E930040D9EC = {
 			isa = PBXGroup;
 			children = (
+				9A3458C72AC2295D008818CD /* GoScripture iOS App.entitlements */,
 				9AED3FE92AB65BBD00B4F47F /* SharedCode */,
 				9A7E22D32AA16E930040D9EC /* GoScripture-WatchOS */,
 				9A4C99732AB4E633000543D3 /* GoScripture-iOS */,
@@ -349,6 +376,7 @@
 		9AED3FE92AB65BBD00B4F47F /* SharedCode */ = {
 			isa = PBXGroup;
 			children = (
+				9A3458812AC20400008818CD /* Intents */,
 				9A7E23022AA16EB30040D9EC /* Model */,
 				9A7E23042AA16EBF0040D9EC /* ViewModel */,
 				9A7E23062AA16F0B0040D9EC /* Service */,
@@ -456,6 +484,7 @@
 				9A7E22CC2AA16E930040D9EC /* Frameworks */,
 				9A7E22CD2AA16E930040D9EC /* Resources */,
 				9A1105B82AA2E30A0033DA22 /* Embed Foundation Extensions */,
+				9A3458D92AC22D1D008818CD /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
@@ -617,6 +646,7 @@
 				9AED3FF12AB65D3300B4F47F /* ResultsViewModel.swift in Sources */,
 				9A4C99772AB4E633000543D3 /* ContentView.swift in Sources */,
 				9A4C99752AB4E633000543D3 /* GoScripture_iOSApp.swift in Sources */,
+				9A3458C62AC22200008818CD /* AppIntents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +657,7 @@
 				9A886C4F2AA5316B00EED127 /* ResultsView.swift in Sources */,
 				9A192C602AA17B0E006DF982 /* SearchView.swift in Sources */,
 				9A1848B62AA65EB0007A9B62 /* TextGradient.swift in Sources */,
+				9A3458832AC2040B008818CD /* AppIntents.swift in Sources */,
 				9A1848B42AA63755007A9B62 /* ResultsTabView.swift in Sources */,
 				9A886C512AA53AED00EED127 /* ResultsViewModel.swift in Sources */,
 				9A7E23082AA16F1B0040D9EC /* GoScriptureAPI.swift in Sources */,
@@ -834,6 +865,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "GoScripture iOS App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GoScripture-iOS/Preview Content\"";
@@ -866,6 +898,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "GoScripture iOS App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GoScripture-iOS/Preview Content\"";
@@ -1010,6 +1043,7 @@
 		9A7E22F62AA16E940040D9EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconWatchOS;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "GoScripture-WatchOS Watch App.entitlements";
@@ -1042,6 +1076,7 @@
 		9A7E22F72AA16E940040D9EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconWatchOS;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "GoScripture-WatchOS Watch App.entitlements";
