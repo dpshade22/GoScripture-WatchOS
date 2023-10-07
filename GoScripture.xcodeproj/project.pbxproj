@@ -25,6 +25,7 @@
 		9A4C99772AB4E633000543D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C99762AB4E633000543D3 /* ContentView.swift */; };
 		9A4C99792AB4E634000543D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4C99782AB4E634000543D3 /* Assets.xcassets */; };
 		9A4C997C2AB4E634000543D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4C997B2AB4E634000543D3 /* Preview Assets.xcassets */; };
+		9A7DF53F2AD1E468006DA995 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 9A7DF53E2AD1E468006DA995 /* QGrid */; };
 		9A7E22D52AA16E930040D9EC /* GoScripture_WatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E22D42AA16E930040D9EC /* GoScripture_WatchOSApp.swift */; };
 		9A7E22D72AA16E930040D9EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E22D62AA16E930040D9EC /* ContentView.swift */; };
 		9A7E22D92AA16E940040D9EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E22D82AA16E940040D9EC /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		9A7E230B2AA16F440040D9EC /* ScriptureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E230A2AA16F440040D9EC /* ScriptureModel.swift */; };
 		9A886C4F2AA5316B00EED127 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C4E2AA5316B00EED127 /* ResultsView.swift */; };
 		9A886C512AA53AED00EED127 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C502AA53AED00EED127 /* ResultsViewModel.swift */; };
+		9ACBE8302AD1DFF800A46CC6 /* TextGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1848B52AA65EB0007A9B62 /* TextGradient.swift */; };
 		9AED3FEB2AB65CEC00B4F47F /* GoScriptureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E23072AA16F1B0040D9EC /* GoScriptureAPI.swift */; };
 		9AED3FF12AB65D3300B4F47F /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A886C502AA53AED00EED127 /* ResultsViewModel.swift */; };
 		9AED3FF22AB65DC400B4F47F /* ScriptureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E230A2AA16F440040D9EC /* ScriptureModel.swift */; };
@@ -169,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7DF53F2AD1E468006DA995 /* QGrid in Frameworks */,
 				9A3458DA2AC22F5F008818CD /* Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,7 +355,6 @@
 				9A192C622AA17C73006DF982 /* ScriptureView.swift */,
 				9A886C4E2AA5316B00EED127 /* ResultsView.swift */,
 				9A1848B32AA63755007A9B62 /* ResultsTabView.swift */,
-				9A1848B52AA65EB0007A9B62 /* TextGradient.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,9 +375,18 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		9ACBE8312AD1E00200A46CC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A1848B52AA65EB0007A9B62 /* TextGradient.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9AED3FE92AB65BBD00B4F47F /* SharedCode */ = {
 			isa = PBXGroup;
 			children = (
+				9ACBE8312AD1E00200A46CC6 /* View */,
 				9A3458812AC20400008818CD /* Intents */,
 				9A7E23022AA16EB30040D9EC /* Model */,
 				9A7E23042AA16EBF0040D9EC /* ViewModel */,
@@ -472,6 +483,9 @@
 			dependencies = (
 			);
 			name = "GoScripture iOS App";
+			packageProductDependencies = (
+				9A7DF53E2AD1E468006DA995 /* QGrid */,
+			);
 			productName = "GoScripture-iOS";
 			productReference = 9A4C99722AB4E632000543D3 /* GoScripture iOS App.app */;
 			productType = "com.apple.product-type.application";
@@ -539,6 +553,9 @@
 				Base,
 			);
 			mainGroup = 9A7E22C22AA16E930040D9EC;
+			packageReferences = (
+				9A7DF53D2AD1E468006DA995 /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = 9A7E22CA2AA16E930040D9EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -643,6 +660,7 @@
 			files = (
 				9AED3FF22AB65DC400B4F47F /* ScriptureModel.swift in Sources */,
 				9AED3FEB2AB65CEC00B4F47F /* GoScriptureAPI.swift in Sources */,
+				9ACBE8302AD1DFF800A46CC6 /* TextGradient.swift in Sources */,
 				9AED3FF12AB65D3300B4F47F /* ResultsViewModel.swift in Sources */,
 				9A4C99772AB4E633000543D3 /* ContentView.swift in Sources */,
 				9A4C99752AB4E633000543D3 /* GoScripture_iOSApp.swift in Sources */,
@@ -1174,6 +1192,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A7DF53D2AD1E468006DA995 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A7DF53E2AD1E468006DA995 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A7DF53D2AD1E468006DA995 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A7E22C32AA16E930040D9EC /* Project object */;
 }
