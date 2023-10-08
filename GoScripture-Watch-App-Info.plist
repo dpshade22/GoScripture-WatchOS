@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSUserActivityTypes</key>
-	<array>
-		<string>GetScriptureIntent</string>
-	</array>
+	<array/>
 	<key>WKWatchKitApp</key>
 	<true/>
 	<key>WKWatchOnly</key>
