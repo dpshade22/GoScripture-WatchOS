@@ -18,13 +18,11 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $tabSelection) {
-            if isSubscribed {
                 SearchView(resultsViewModel: resultsViewModel, tabSelection: $tabSelection, selectedVerse: $selectedVerse)
                     .tabItem {
                         Text("Search")
                     }
                     .tag(0)
-            }
             
             if resultsViewModel.scriptures.count > 0 {
                 ResultsTabView(resultsViewModel: resultsViewModel, selectedVerse: $selectedVerse)

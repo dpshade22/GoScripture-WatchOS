@@ -9,7 +9,7 @@
 import Foundation
 
 class GoScriptureAPI: ObservableObject {
-    @Published var scriptures: [Scripture] = []
+    @Published var scriptures: [Scripture] = [] 
     private let baseURL = "https://goscripture-hono.fly.dev"
 
     func fetchData(searchText: String) async throws -> [Scripture] {

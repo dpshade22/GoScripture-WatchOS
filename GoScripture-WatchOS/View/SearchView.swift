@@ -11,7 +11,7 @@ struct SearchView: View {
     @ObservedObject var resultsViewModel: ResultsViewModel
     @Binding var tabSelection: Int
     @Binding var selectedVerse: Int
-
+    
     @State var searchText = ""
     @State var isLoading: Bool = false
     
@@ -19,6 +19,13 @@ struct SearchView: View {
     
     var body: some View {
         VStack {
+            
+                Image("Go Scripture")
+                    .resizable()
+                    .frame(width: 150, height: 30)
+                    .padding()
+
+            Spacer()
             TextField("Search God's Word", text: $searchText)
                 .padding()
                 .foregroundStyle(
@@ -48,13 +55,6 @@ struct SearchView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     Spacer()
-                    Button {
-                        tabSelection = 1
-                    } label: {
-                        Text("Back to results")
-                            .italic()
-                    }
-                    .buttonStyle(PlainButtonStyle())
                 }
             }
         }
@@ -65,20 +65,16 @@ struct SearchView: View {
         Task {
             do {
                 isLoading = true
-                #if os(watchOS)
                 let timer = Timer.scheduledTimer(withTimeInterval: 0.33, repeats: true) { timer in
                     WKInterfaceDevice.current().play(.click)
                 }
-                #endif
                 resultsViewModel.scriptures = []
                 
                 let fetchedScriptures = try await apiClient.fetchData(searchText: searchText)
                 DispatchQueue.main.async {
                     resultsViewModel.scriptures = fetchedScriptures
-                    #if os(watchOS)
                     timer.invalidate()
                     WKInterfaceDevice.current().play(.success)
-                    #endif
                     isLoading = false
                     selectedVerse = 0
                     tabSelection = 1
